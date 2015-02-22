@@ -1,0 +1,12 @@
+﻿@model Tapyt.Websites.Base.Models.CreateAreaViewModel
+
+@using (Html.BeginForm("CreateArea", "Area", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Text)
+    @Html.TextAreaFor(m => m.Text)
+
+    <input type="submit" id="submitBtn" value="Create area" />
+}

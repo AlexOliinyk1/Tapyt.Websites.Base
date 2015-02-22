@@ -1,0 +1,23 @@
+﻿@model Tapyt.Websites.Base.Models.CreateSubjectViewModel
+
+<h1>Lav nyt emne</h1>
+
+@using (Html.BeginForm("CreateSubject", "Subject", FormMethod.Post))
+{
+   @Html.HiddenFor(m=>m.AreaId) 
+    
+    @Html.LabelFor(c => c.Title)
+    @Html.TextBoxFor(c => c.Title)
+
+    @Html.LabelFor(c => c.Teaser)
+    @Html.TextAreaFor(c => c.Teaser)
+
+    @Html.LabelFor(c => c.MetaDescription)
+    @Html.TextAreaFor(c => c.MetaDescription)
+
+    @Html.LabelFor(c => c.MetaTitle)
+    @Html.TextBoxFor(c => c.MetaTitle)
+
+
+    <input type="submit" value="Lav emne" />
+}

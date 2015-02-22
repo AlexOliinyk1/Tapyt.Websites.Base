@@ -1,0 +1,16 @@
+﻿@model Tapyt.Websites.Base.Models.SubjectViewModel
+
+<h1>@Model.Title</h1>
+
+@Model.Teaser
+
+<h2>Forklaringer af @Model.Title</h2>
+@foreach (var model in Model.Descriptions)
+{
+    @Html.Partial("_Description", model)
+}
+
+<div>
+    <p>Tilføj din egen beskrivelse</p>
+</div>
+

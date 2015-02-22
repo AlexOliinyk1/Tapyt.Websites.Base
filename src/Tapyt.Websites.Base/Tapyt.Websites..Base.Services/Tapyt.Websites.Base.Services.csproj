@@ -61,10 +61,11 @@
     <Compile Include="Domain\Entry\EntryType.cs" />
     <Compile Include="Domain\Subject\Subject.cs" />
     <Compile Include="Domain\Subject\SubjectSpecification.cs" />
+    <Compile Include="Factory\AreaFactory.cs" />
     <Compile Include="Factory\EntryFactory.cs" />
     <Compile Include="Factory\SubjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AliasService.cs" />
+    <Compile Include="Services\AreaService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\EntryService.cs" />
     <Compile Include="Utils\Helpers.cs" />

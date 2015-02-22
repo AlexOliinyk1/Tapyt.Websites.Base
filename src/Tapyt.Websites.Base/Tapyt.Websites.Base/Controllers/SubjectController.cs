@@ -47,6 +47,33 @@ namespace Tapyt.Websites.Base.Controllers
             return View(model);
         }
 
+        public ActionResult CreateSubject(Guid areaid)
+        {
+            return View(new CreateSubjectViewModel()
+            {
+                AreaId = areaid
+            });
+        }
+
+        [HttpPost]
+        public ActionResult CreateSubject(CreateSubjectViewModel model)
+        {
+            _subjectService.Create(new Subject()
+            {
+                Title = model.Title,
+                Teaser = model.Teaser,
+                MetaTitle = model.MetaTitle,
+                MetaDescription = model.MetaDescription,
+                AreaId = model.AreaId,
+            
+            });
+
+            return View(new CreateSubjectViewModel()
+            {
+                AreaId = model.AreaId
+            });
+        }
+
         private SubjectViewModel setSubjectViewModel(Subject subject, List<Entry> entries)
         {
             var s = new SubjectViewModel()
@@ -79,6 +106,7 @@ namespace Tapyt.Websites.Base.Controllers
 
                 }
             }
+            return s;
         }
     }
 }

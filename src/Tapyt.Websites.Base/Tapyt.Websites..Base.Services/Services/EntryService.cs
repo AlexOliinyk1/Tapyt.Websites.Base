@@ -45,7 +45,7 @@ namespace Tapyt.Websites.Base.Services.Services
                     entries = entries.Where(c => spec.SubjectIds.Contains(c.SubjectId));
                 }
 
-                var ent = _entryFactory.Create(entries.Skip(spec.Skip).Take(spec.Take).ToList());
+                var ent = _entryFactory.Create(entries.OrderBy(c=>c.Id).Skip(spec.Skip).Take(spec.Take).ToList());
                 return ent;
             }
         }

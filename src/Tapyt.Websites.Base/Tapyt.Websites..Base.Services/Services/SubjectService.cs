@@ -52,7 +52,7 @@ namespace Tapyt.Websites.Base.Services.Services
                 }
 
                 var subjects =
-                    _subjectFactory.Create(dbsubjects.Skip(specification.Skip).Take(specification.Take).ToList());
+                    _subjectFactory.Create(dbsubjects.OrderBy(c=>c.Id).Skip(specification.Skip).Take(specification.Take).ToList());
 
                 return subjects;
             }

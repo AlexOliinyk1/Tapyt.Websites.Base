@@ -1,0 +1,9 @@
+﻿@model Tapyt.Websites.Base.Models.AreaViewModel
+
+<h1>@Model.Title</h1>
+
+@Html.ActionLink("Lav emne", "CreateSubject", "Subject",new { areaid  = Model.Id}, new{})
+
+<div>
+    @Model.Text
+</div>
