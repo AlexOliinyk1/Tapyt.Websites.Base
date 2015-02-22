@@ -3,15 +3,82 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Tapyt.Websites.Base.Models;
+using Tapyt.Websites.Base.Services.Domain.Entry;
+using Tapyt.Websites.Base.Services.Domain.Subject;
+using Tapyt.Websites.Base.Services.Services;
 
 namespace Tapyt.Websites.Base.Controllers
 {
     public class SubjectController : Controller
     {
+        private SubjectService _subjectService;
+        private EntryService _entryService;
+
+        public SubjectController()
+        {
+            _subjectService = new SubjectService();
+            _entryService = new EntryService();
+        }
+
         // GET: Subject
         public ActionResult Index(string alias)
         {
-            return View();
+            var aliasL = alias.ToLower().Trim();
+
+            var subject = _subjectService.GetSubjectsBySpecification(new SubjectSpecification()
+            {
+                Take = 1,
+                Alias = new List<string>() {  aliasL}
+            }).FirstOrDefault();
+
+            if (subject == null)
+            {
+                throw new HttpException(404,"Not found");
+            }
+
+            var entries = _entryService.GetEntriesBySpecifications(new EntrySpecification()
+            {
+                Take = int.MaxValue,
+                SubjectIds = new List<Guid>() { subject.Id }
+            });
+
+            var model = setSubjectViewModel(subject, entries);
+            return View(model);
+        }
+
+        private SubjectViewModel setSubjectViewModel(Subject subject, List<Entry> entries)
+        {
+            var s = new SubjectViewModel()
+            {
+                Title = subject.Title
+            };
+
+            foreach (var entry in entries)
+            {
+                switch (entry.EntryType)
+                {
+                    case EntryType.Description:
+                        s.Descriptions.Add(new DescriptionViewModel()
+                        {
+                            Title = entry.Title
+                        });
+                        break;
+                    case EntryType.Video:
+                        s.Videos.Add(new VideoViewModel()
+                        {
+                            Title = entry.Title
+                        });
+                        break;
+                    case EntryType.Note:
+                        s.Notes.Add(new NoteViewModel()
+                        {
+                            Title = entry.Title
+                        });
+                        break;
+
+                }
+            }
         }
     }
 }

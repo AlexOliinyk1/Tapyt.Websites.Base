@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TapytModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DbArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DbComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="DateDeleted" Type="datetime" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Upvote" Type="int" Nullable="false" />
+    <Property Name="Downvote" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DbEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EntryType" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="DateDeleted" Type="datetime" />
+    <Property Name="Upvote" Type="int" Nullable="false" />
+    <Property Name="Downvote" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="SubjectId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DbSubject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Teaser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="DateDeleted" Type="datetime" />
+    <Property Name="AreaId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Views" Type="int" Nullable="false" />
+    <Property Name="MetaTitle" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="MetaDescription" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TapytModelStoreContainer">
+    <EntitySet Name="DbArea" EntityType="Self.DbArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DbComment" EntityType="Self.DbComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DbEntry" EntityType="Self.DbEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DbSubject" EntityType="Self.DbSubject" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

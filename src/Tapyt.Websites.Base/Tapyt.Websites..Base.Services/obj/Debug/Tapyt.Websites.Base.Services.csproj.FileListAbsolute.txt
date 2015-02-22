@@ -1,0 +1,12 @@
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\obj\Debug\Tapyt.Websites.Base.Services.csprojResolveAssemblyReference.cache
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\Tapyt.Websites._.Base.Services.dll.config
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\Tapyt.Websites._.Base.Services.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\Tapyt.Websites._.Base.Services.pdb
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\EntityFramework.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\Tapyt.Websites.Base.DAL.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\Tapyt.Websites.Base.DAL.pdb
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\EntityFramework.xml
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\obj\Debug\Tapyt.Websites._.Base.Services.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites..Base.Services\obj\Debug\Tapyt.Websites._.Base.Services.pdb

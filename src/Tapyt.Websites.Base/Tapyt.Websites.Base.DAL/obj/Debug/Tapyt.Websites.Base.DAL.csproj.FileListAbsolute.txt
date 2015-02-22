@@ -1,0 +1,10 @@
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\Tapyt.Websites.Base.DAL.dll.config
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\Tapyt.Websites.Base.DAL.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\Tapyt.Websites.Base.DAL.pdb
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\EntityFramework.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\EntityFramework.xml
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\obj\Debug\Tapyt.Websites.Base.DAL.dll
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\obj\Debug\Tapyt.Websites.Base.DAL.pdb
+C:\Users\LarsBootcampOsx\Documents\Work\Tapyt\Tapyt.Websites.Base\src\Tapyt.Websites.Base\Tapyt.Websites.Base.DAL\obj\Debug\Tapyt.Websites.Base.DAL.csprojResolveAssemblyReference.cache
