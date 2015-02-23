@@ -2,8 +2,9 @@
 
 <div>
     <h3>@Model.Title</h3>
-   @Model.VideoUrl
+   
     
+    @Html.Raw(Model.VideoUrl)
     
     <div>
         @Model.UpVotes (Y) , @Model.DownVotes (N)

@@ -34,6 +34,23 @@ namespace Tapyt.Websites.Base.Services.Services
             }
         }
 
+        public Area Update(Area area)
+        {
+            using (var tapyt = new TapytEntities())
+            {
+                var dbarea = tapyt.DbArea.FirstOrDefault(c => c.Id == area.Id);
+
+                dbarea.Text = area.Text;
+                dbarea.Title = area.Title;
+                dbarea.Alias = area.Alias;
+
+                tapyt.SaveChanges();
+            }
+
+
+            return GetAreaById(area.Id);
+        }
+
         public Area Create(Area area)
         {
             var newId = Guid.NewGuid();

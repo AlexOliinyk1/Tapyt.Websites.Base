@@ -8,6 +8,7 @@ namespace Tapyt.Websites.Base.Models
 {
     public class SubjectViewModel
     {
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Teaser { get; set; }
         public List<DescriptionViewModel> Descriptions { get; set; }

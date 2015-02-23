@@ -78,7 +78,9 @@ namespace Tapyt.Websites.Base.Controllers
         {
             var s = new SubjectViewModel()
             {
-                Title = subject.Title
+                Title = subject.Title,
+                Teaser = subject.Teaser,
+                Id = subject.Id
             };
 
             foreach (var entry in entries)
@@ -88,19 +90,31 @@ namespace Tapyt.Websites.Base.Controllers
                     case EntryType.Description:
                         s.Descriptions.Add(new DescriptionViewModel()
                         {
-                            Title = entry.Title
+                            Title = entry.Title,
+                            DownVotes = entry.DownVotes,
+                            Id = entry.Id,
+                            Text =entry.Text,
+                            UpVotes = entry.UpVotes
                         });
                         break;
                     case EntryType.Video:
                         s.Videos.Add(new VideoViewModel()
                         {
-                            Title = entry.Title
+                            Title = entry.Title,
+                            DownVotes = entry.DownVotes,
+                            
+                            VideoUrl = entry.Text,
+                            UpVotes = entry.UpVotes
                         });
                         break;
                     case EntryType.Note:
                         s.Notes.Add(new NoteViewModel()
                         {
-                            Title = entry.Title
+                            Title = entry.Title,
+                            DownVotes = entry.DownVotes,
+                            Id = entry.Id,
+                            Text = entry.Text,
+                            UpVotes = entry.UpVotes
                         });
                         break;
 

@@ -43,6 +43,30 @@ namespace Tapyt.Websites.Base.Controllers
             return View(new CreateAreaViewModel());
         }
 
+        public ActionResult UpdateArea(Guid id)
+        {
+            var area = _areaService.GetAreaById(id);
+
+            return View(SetCreateAreaViewModel(area));
+        }
+
+        [ValidateInput(false)]
+        [HttpPost]
+        public ActionResult UpdateArea(CreateAreaViewModel model)
+        {
+
+            var area = _areaService.GetAreaById(model.Id);
+            area.Text = model.Text;
+            area.Title = model.Title;
+
+            _areaService.Update(area);
+
+            return RedirectToAction("Index", "Area", new {alias = area.Alias});
+
+        }
+
+
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult CreateArea(CreateAreaViewModel model)
         {
@@ -57,13 +81,24 @@ namespace Tapyt.Websites.Base.Controllers
         }
 
 
+        public static CreateAreaViewModel SetCreateAreaViewModel(Area area)
+        {
+            return new CreateAreaViewModel()
+            {
+                Title = area.Title,
+                Id = area.Id,
+                Text = area.Text
+            };
+        }
+
         public static AreaViewModel setAreaViewModel(Area area)
         {
             AreaViewModel v = new AreaViewModel()
             {
                 Title = area.Title,
                 Text = area.Text,
-                Id = area.Id
+                Id = area.Id,
+                Alias = area.Alias
             };
 
             return v;

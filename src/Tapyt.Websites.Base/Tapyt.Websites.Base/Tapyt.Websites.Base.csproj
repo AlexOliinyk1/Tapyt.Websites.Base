@@ -167,10 +167,11 @@
     <Content Include="Views\Subject\_Description.cshtml" />
     <Content Include="Views\Subject\_Note.cshtml" />
     <Content Include="Views\Subject\_Video.cshtml" />
+    <Content Include="Views\Entry\CreateEntry.cshtml" />
+    <Content Include="Views\Area\UpdateArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Entry\" />
     <Folder Include="Views\Overview\" />
   </ItemGroup>
   <ItemGroup>

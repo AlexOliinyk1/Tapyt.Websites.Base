@@ -9,7 +9,5 @@
 
 @foreach (var item in Model.Areas)
 {
-    <p>
-        @item.Title
-    </p>
+ @Html.ActionLink(item.Title, "Index", "Area", new { alias =item.Alias}, null)   
 }

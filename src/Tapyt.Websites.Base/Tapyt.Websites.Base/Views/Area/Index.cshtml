@@ -2,8 +2,9 @@
 
 <h1>@Model.Title</h1>
 
-@Html.ActionLink("Lav emne", "CreateSubject", "Subject",new { areaid  = Model.Id}, new{})
+@Html.ActionLink("Lav emne", "CreateSubject", "Subject", new { areaid = Model.Id }, new { })
+@Html.ActionLink("Opdater område", "UpdateArea", "Area", new { id = Model.Id }, new { })
 
 <div>
-    @Model.Text
+    @Html.Raw(Model.Text)
 </div>

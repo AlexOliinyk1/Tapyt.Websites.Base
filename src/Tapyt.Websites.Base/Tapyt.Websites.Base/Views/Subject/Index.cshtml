@@ -1,8 +1,9 @@
-﻿@model Tapyt.Websites.Base.Models.SubjectViewModel
+﻿@using Tapyt.Websites.Base.Services.Domain.Entry
+@model Tapyt.Websites.Base.Models.SubjectViewModel
 
 <h1>@Model.Title</h1>
 
-@Model.Teaser
+@Html.Raw(Model.Teaser)
 
 <h2>Forklaringer af @Model.Title</h2>
 @foreach (var model in Model.Descriptions)
@@ -11,6 +12,26 @@
 }
 
 <div>
-    <p>Tilføj din egen beskrivelse</p>
+    <p>@Html.ActionLink("Tilføj din egen beskrivelse", "CreateEntry", "Entry", new { subjectId = Model.Id, type = (int)EntryType.Description }, null)</p>
+</div>
+
+<h2>Videoer om @Model.Title</h2>
+@foreach (var model in Model.Videos)
+{
+    @Html.Partial("_Video", model)
+}
+
+<div>
+    <p>@Html.ActionLink("Tilføj din egen video", "CreateEntry", "Entry", new { subjectId = Model.Id, type = (int)EntryType.Video }, null)</p>
+</div>
+
+<h2>Noter om @Model.Title</h2>
+@foreach (var model in Model.Notes)
+{
+    @Html.Partial("_Note", model)
+}
+
+<div>
+    <p>@Html.ActionLink("Tilføj din egen noter", "CreateEntry", "Entry", new { subjectId = Model.Id, type = (int)EntryType.Note }, null)</p>
 </div>
 

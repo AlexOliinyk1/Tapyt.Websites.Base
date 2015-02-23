@@ -1,0 +1,19 @@
+﻿@model Tapyt.Websites.Base.Models.CreateEntryViewModel
+
+
+@using (Html.BeginForm("CreateEntry", "Entry", FormMethod.Post))
+{
+    <h1>Lav en ny besvarelse</h1>
+
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Content)
+    @Html.TextBoxFor(m => m.Content)
+
+    <input type="submit" value="Lav besvarelse" />
+    
+    @Html.HiddenFor(m => m.EntryType)
+    @Html.HiddenFor(m => m.SubjectId)
+
+}

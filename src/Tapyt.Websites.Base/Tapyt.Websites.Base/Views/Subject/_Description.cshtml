@@ -2,8 +2,7 @@
 
 <div>
     <h3>@Model.Title</h3>
-   @Model.Text
-    
+   @Html.Raw(Model.Text) 
     
     <div>
         @Model.UpVotes (Y) , @Model.DownVotes (N)
